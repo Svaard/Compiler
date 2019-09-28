@@ -12,7 +12,7 @@ public class Main {
         try {
         	File code = new File(fileName);
         	Scanner sc  = new Scanner(code);
-        	// TODO store each char in ArrayList for future use?
+        	// TODO store each char in ArrayList that we pass to lexer object
                     
         }
         catch(FileNotFoundException e) {
