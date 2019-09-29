@@ -7,55 +7,51 @@ public class Lexer {
 	ArrayList<ArrayList<Character>> lines;
 	private static int charCount; // keep track of current character from input stream
 	private static int peekPos; // keep track of character we are looking forward to
-
-	// TODO map tokens to id numbers?
-	// TODO deterministic finite automata using switch statements
-
 	private static Map<Integer, String> lexicon = new HashMap<Integer, String>();
 
 	public Lexer(ArrayList<ArrayList<Character>> lines) {
 		this.lines = lines;
 		lexicon.put(6, ",");
-        lexicon.put(7, ";");
-        lexicon.put(10, "prog");
-        lexicon.put(11, "main");
-        lexicon.put(12, "fcn");
-        lexicon.put(13, "class");
-        lexicon.put(15, "float");
-        lexicon.put(16, "int");
-        lexicon.put(17, "string");
-        lexicon.put(18, "if");
-        lexicon.put(19, "elseif");
-        lexicon.put(20, "else");
-        lexicon.put(21, "while");
-        lexicon.put(22, "input");
-        lexicon.put(23, "print");
-        lexicon.put(24, "new");
-        lexicon.put(25, "return");
-        lexicon.put(26, "var");
-        lexicon.put(31, "<");
-        lexicon.put(32, ">");
-        lexicon.put(33, "{");
-        lexicon.put(34, "}");
-        lexicon.put(35, "[");
-        lexicon.put(36, "]");
-        lexicon.put(37, "(");
-        lexicon.put(38, ")");
-        lexicon.put(41, "*");
-        lexicon.put(42, "^");
-        lexicon.put(43, ":");
-        lexicon.put(44, ".");
-        lexicon.put(45, "=");
-        lexicon.put(46, "-");
-        lexicon.put(47, "+");
-        lexicon.put(48, "/");
-        lexicon.put(51, "->");
-        lexicon.put(52, "==");
-        lexicon.put(53, "!=");
-        lexicon.put(54, "<=");
-        lexicon.put(55, ">=");
-        lexicon.put(56, "<<");
-        lexicon.put(57, ">>");
+		lexicon.put(7, ";");
+		lexicon.put(10, "prog");
+		lexicon.put(11, "main");
+		lexicon.put(12, "fcn");
+		lexicon.put(13, "class");
+		lexicon.put(15, "float");
+		lexicon.put(16, "int");
+		lexicon.put(17, "string");
+		lexicon.put(18, "if");
+		lexicon.put(19, "elseif");
+		lexicon.put(20, "else");
+		lexicon.put(21, "while");
+		lexicon.put(22, "input");
+		lexicon.put(23, "print");
+		lexicon.put(24, "new");
+		lexicon.put(25, "return");
+		lexicon.put(26, "var");
+		lexicon.put(31, "<");
+		lexicon.put(32, ">");
+		lexicon.put(33, "{");
+		lexicon.put(34, "}");
+		lexicon.put(35, "[");
+		lexicon.put(36, "]");
+		lexicon.put(37, "(");
+		lexicon.put(38, ")");
+		lexicon.put(41, "*");
+		lexicon.put(42, "^");
+		lexicon.put(43, ":");
+		lexicon.put(44, ".");
+		lexicon.put(45, "=");
+		lexicon.put(46, "-");
+		lexicon.put(47, "+");
+		lexicon.put(48, "/");
+		lexicon.put(51, "->");
+		lexicon.put(52, "==");
+		lexicon.put(53, "!=");
+		lexicon.put(54, "<=");
+		lexicon.put(55, ">=");
+		lexicon.put(56, "<<");
+		lexicon.put(57, ">>");
 	}
 
 	//tokenize a single line represented by an ArrayList of chars
