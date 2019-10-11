@@ -281,7 +281,7 @@ public class Lexer {
 			for (int key : lexicon.keySet()) {
 				if (lexicon.get(key).equalsIgnoreCase(parsed)) {
 		    		return key;
-		    	}
+		    		}
 			}
 		} 
 		else if (Character.isLetter(parsed.charAt(0)) || parsed.charAt(0) == '_') {
